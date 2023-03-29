@@ -30,7 +30,7 @@
          <main id="site_main">
             <div class="container_small d-flex justify-content-center
                align-items-center">
-               <div class="slider position-relative shadow w-100">
+               <div class="slider position-relative shadow w-100" @mouseleave="autoplayOn" @mouseenter="autoplayOff">
                   <div class="images w-100">
                      <img
                         :class="index === activeImg ? 'active' : ''"

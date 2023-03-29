@@ -14,6 +14,7 @@ createApp({
    data() {
       return {
          activeImg: 0,
+         autoplay: '',
          contentArray: {
 
             images: [
@@ -59,8 +60,17 @@ createApp({
             this.activeImg = 0;
          }
       },
-      showThumb(index){
+      showThumb(index) {
          this.activeImg = index;
-      }      
+      },
+      autoplayOn() {
+         this.autoplay = setInterval(() => {
+            this.next();
+         }, 3000);
+      },
+      
+      autoplayOff() {
+         clearInterval(this.autoplay);
+      },
    }
 }).mount('#app');
