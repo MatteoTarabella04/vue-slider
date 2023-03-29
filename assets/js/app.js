@@ -58,7 +58,9 @@ createApp({
          if (this.activeImg === this.contentArray.images.length) {
             this.activeImg = 0;
          }
-      }
-      
+      },
+      showThumb(index){
+         this.activeImg = index;
+      }      
    }
 }).mount('#app');

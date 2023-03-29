@@ -47,6 +47,7 @@
                         :class="index === activeImg ? 'active' : ''"
                         v-for="(img, index) in contentArray.images"
                         :src="'./assets/' + img" height="120" alt=""
+                        @click="showThumb(index)"
                      >
                   </div>
 
