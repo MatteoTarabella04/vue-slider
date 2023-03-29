@@ -21,6 +21,31 @@
    </head>
    <body>
 
+      <!-- VUE -->
+      <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+
+      <div id="app">
+
+         <main id="site_main">
+            <div class="container_small d-flex justify-content-center
+               align-items-center">
+               <div class="slider position-relative shadow w-100">
+                  <div class="images w-100">
+                     <img :class="index === activeImg ? 'active' : ''" v-for="(img, index) in contentArray.images" :src="'./assets/' + img" alt="">
+                     
+                  </div>
+                  <div class="thumbnail">
+                     
+                  </div>
+               </div>
+            </div>
+
+         </main>
+         <!-- /#site_main -->
+
+      </div>
+
       <!-- bootstrap -->
       <script
          src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'></script>
