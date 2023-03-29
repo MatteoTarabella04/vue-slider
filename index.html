@@ -32,10 +32,15 @@
                align-items-center">
                <div class="slider position-relative shadow w-100">
                   <div class="images w-100">
-                     <img :class="index === activeImg ? 'active' : ''"
+                     <img
+                        :class="index === activeImg ? 'active' : ''"
                         v-for="(img, index) in contentArray.images"
-                        :src="'./assets/' + img" alt="">
-
+                        :src="'./assets/' + img" alt=""
+                     >
+                  </div>
+                  <div class="text_sec">
+                     <h2 class="p-2">{{contentArray.titles[activeImg]}}</h2>
+                     <p class="px-2">{{contentArray.descriptions[activeImg]}}</p>
                   </div>
                   <div class="thumbnail">
 
