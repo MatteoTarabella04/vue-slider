@@ -25,3 +25,11 @@ img {
 .images img:not(.active) {
    display: none;
 }
+
+.thumbnail img {
+   width: calc(100% / 5);
+}
+
+.thumbnail img:not(.active) {
+   opacity: 0.5;
+}

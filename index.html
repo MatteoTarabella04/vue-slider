@@ -43,7 +43,11 @@
                      <p class="px-2">{{contentArray.descriptions[activeImg]}}</p>
                   </div>
                   <div class="thumbnail">
-
+                     <img
+                        :class="index === activeImg ? 'active' : ''"
+                        v-for="(img, index) in contentArray.images"
+                        :src="'./assets/' + img" height="120" alt=""
+                     >
                   </div>
 
                   <nav class="d-flex justify-content-between">
