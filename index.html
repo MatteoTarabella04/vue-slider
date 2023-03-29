@@ -32,12 +32,23 @@
                align-items-center">
                <div class="slider position-relative shadow w-100">
                   <div class="images w-100">
-                     <img :class="index === activeImg ? 'active' : ''" v-for="(img, index) in contentArray.images" :src="'./assets/' + img" alt="">
-                     
+                     <img :class="index === activeImg ? 'active' : ''"
+                        v-for="(img, index) in contentArray.images"
+                        :src="'./assets/' + img" alt="">
+
                   </div>
                   <div class="thumbnail">
-                     
+
                   </div>
+
+                  <nav class="d-flex justify-content-between">
+                     <button class="btn prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                     </button>
+                     <button class="btn next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                     </button>
+                  </nav>
                </div>
             </div>
 
