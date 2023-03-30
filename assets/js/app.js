@@ -49,20 +49,20 @@ createApp({
 
       prev() {
          console.log('prev');
-         this.activeImg--
-         if (this.activeImg < 0) {
-            this.activeImg = this.contentArray.length - 1;
+         this.activeImage--
+         if (this.activeImage < 0) {
+            this.activeImage = this.contentArray.length - 1;
          }
       },
       next() {
          console.log('next');
-         this.activeImg++
-         if (this.activeImg === this.contentArray.length) {
-            this.activeImg = 0;
+         this.activeImage++
+         if (this.activeImage === this.contentArray.length) {
+            this.activeImage = 0;
          }
       },
       showThumb(index) {
-         this.activeImg = index;
+         this.activeImage = index;
       },
       autoplayOn() {
          this.autoplay = setInterval(() => {
