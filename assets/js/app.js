@@ -14,7 +14,7 @@ createApp({
    data() {
       return {
          autoplay: '',
-         activeImg: 0,
+         activeImage: 0,
          contentArray: [
             {
                image: 'img/01.webp',

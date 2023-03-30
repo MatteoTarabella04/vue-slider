@@ -32,15 +32,15 @@
                align-items-center">
                <div class="slider position-relative shadow w-100" @mouseleave="autoplayOn" @mouseenter="autoplayOff">
                   <div class="images w-100">
-                     <img :src=" './assets/' + contentArray[activeImg].image" alt="" :class="index === activeImg ? 'active' : ''" v-for="(img, index) in contentArray[activeImg].image">
+                     <img :src=" './assets/' + contentArray[activeImage].image" alt="" :class="index === activeImage ? 'active' : ''" v-for="(img, index) in contentArray[activeImage].image">
                   </div>
                   <div class="text_sec">
-                     <h2 class="p-2">{{contentArray[activeImg].title}}</h2>
-                     <p class="px-2">{{contentArray[activeImg].text}}</p>
+                     <h2 class="p-2">{{contentArray[activeImage].title}}</h2>
+                     <p class="px-2">{{contentArray[activeImage].text}}</p>
                   </div>
                   <div class="thumbnail">
                      <img
-                        :class="index === activeImg ? 'active' : ''"
+                        :class="index === activeImage ? 'active' : ''"
                         v-for="(img, index) in contentArray"
                         :src="'./assets/' + img.image" height="120" alt=""
                         @click="showThumb(index)"
